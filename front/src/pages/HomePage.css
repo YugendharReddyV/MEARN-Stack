@@ -1,0 +1,221 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: white;
+  line-height: 1.6;
+}
+
+h1, p {
+  text-align: center;
+  color: #333;
+}
+
+.header-container h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ff8c00, #ff0077);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: fadeInText 2s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.header-container p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #f2f2f2;
+}
+
+/* Product List Layout */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Product Card Styling */
+.product-card {
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Card Image */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Card Title and Description */
+.product-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.product-card button {
+  background-color: #ff5722;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #ff5722;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-icon:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles with Hover Effect */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-container h1 {
+    font-size: 3rem;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.85rem;
+  }
+
+  .cart-icon {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .header-container h1 {
+    font-size: 2rem;
+  }
+
+  .cart-icon {
+    bottom: 10px;
+    right: 10px;
+  }
+}

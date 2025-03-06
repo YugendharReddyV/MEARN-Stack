@@ -1,0 +1,228 @@
+/* Header container styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d3748; /* Dark gray-blue */
+  padding: 15px 30px; /* Adequate spacing */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.header__logo h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #f9fafb; /* Off-white for contrast */
+  cursor: pointer;
+}
+
+.header__logo h1:hover {
+  color: #63b3ed; /* Light blue on hover */
+}
+
+/* Search bar styling */
+.header__search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #63b3ed; /* Blue border */
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3182ce; /* Darker blue */
+  box-shadow: 0 0 6px rgba(49, 130, 206, 0.5); /* Light blue glow */
+}
+
+.search-button {
+  background-color: #63b3ed;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #3182ce;
+  transform: scale(1.05); /* Subtle scale effect */
+}
+
+/* Actions container */
+.header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align icons to the right */
+  gap: 25px; /* Increased spacing between icons */
+}
+
+.header__actions ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__actions li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Cart icon styling */
+.header__cart a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  gap: 8px; /* Spacing between icon and text */
+}
+
+.header__cart a:hover {
+  color: #63b3ed;
+  transform: scale(1.1); /* Slight hover effect */
+  gap: 25px; 
+}
+
+/* Profile dropdown styles */
+.header__profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-icon:hover {
+  color: #63b3ed;
+  transform: scale(1.1); /* Slight hover scale */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__search {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .header__actions {
+    gap: 15px; /* Reduced gap for smaller screens */
+  }
+
+  .dropdown-menu {
+    top: 50px;
+    width: 200px;
+  }
+
+  .search-input,
+  .search-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile dropdown styles */
+.header__profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-icon:hover {
+  color: #63b3ed;
+  transform: scale(1.1); /* Slight hover scale */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #ffffff; /* White background */
+  color: #333333;
+  border: 1px solid #e2e8f0; /* Light border */
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+  z-index: 100;
+  padding: 15px 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Spacing for icons */
+  text-decoration: none;
+  color: #333333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #edf2f7; /* Light gray hover */
+  color: #2d3748; /* Darker text */
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  color: #333333;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+.logout-button:hover {
+  background-color: #edf2f7;
+  color: #2d3748;
+}

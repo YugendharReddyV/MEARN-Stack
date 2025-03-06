@@ -1,0 +1,17 @@
+/* Basic App Styling */
+#root {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .main-content {
+    min-height: 80vh;
+  }
+  
+  /* Add this to your global CSS or App.css */
+.main-content {
+    padding-bottom: 60px; /* Add enough space to avoid overlap with footer */
+  }
+  
